@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -o "C:/Users/GEORGE/Desktop/Procesador_3/Procesador_3/PSR_Modifier_TestBench_isim_beh.exe" -prj "C:/Users/GEORGE/Desktop/Procesador_3/Procesador_3/PSR_Modifier_TestBench_beh.prj" "work.PSR_Modifier_TestBench" 
+-intstyle "ise" -incremental -o "G:/Arquitectura2017/Procesador_4/Procesador_4/Sumador_TestBench_isim_beh.exe" -prj "G:/Arquitectura2017/Procesador_4/Procesador_4/Sumador_TestBench_beh.prj" "work.Sumador_TestBench" 

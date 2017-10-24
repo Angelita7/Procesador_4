@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer:
 --
--- Create Date:   14:38:28 10/08/2017
+-- Create Date:   21:52:51 10/23/2017
 -- Design Name:   
--- Module Name:   C:/Users/GEORGE/Pictures/Procesador_2/Procesador_2/ALU_TestBench.vhd
+-- Module Name:   G:/Arquitectura2017/Procesador_4/Procesador_4/ALU_TestBench.vhd
 -- Project Name:  Procesador_2
 -- Target Device:  
 -- Tool versions:  
@@ -44,7 +44,8 @@ ARCHITECTURE behavior OF ALU_TestBench IS
          Contenido_r1 : IN  std_logic_vector(31 downto 0);
          Contenido_r2 : IN  std_logic_vector(31 downto 0);
          Salida_UC : IN  std_logic_vector(5 downto 0);
-         Salida_ALU : OUT  std_logic_vector(31 downto 0)
+         Salida_ALU : OUT  std_logic_vector(31 downto 0);
+         carry : IN  std_logic
         );
     END COMPONENT;
     
@@ -53,6 +54,7 @@ ARCHITECTURE behavior OF ALU_TestBench IS
    signal Contenido_r1 : std_logic_vector(31 downto 0) := (others => '0');
    signal Contenido_r2 : std_logic_vector(31 downto 0) := (others => '0');
    signal Salida_UC : std_logic_vector(5 downto 0) := (others => '0');
+   signal carry : std_logic := '0';
 
  	--Outputs
    signal Salida_ALU : std_logic_vector(31 downto 0);
@@ -68,7 +70,8 @@ BEGIN
           Contenido_r1 => Contenido_r1,
           Contenido_r2 => Contenido_r2,
           Salida_UC => Salida_UC,
-          Salida_ALU => Salida_ALU
+          Salida_ALU => Salida_ALU,
+          carry => carry
         );
 
    -- Clock process definitions
@@ -84,17 +87,10 @@ BEGIN
    -- Stimulus process
    stim_proc: process
    begin		
-      -- hold reset state for 100 ns.
-      --wait for 100 ns;	
-		
-		Contenido_r1 <= x"00000004";
+      Contenido_r1 <= x"00000004";
 		Contenido_r2 <= x"00000002";
-		Salida_UC <= "000100";
+		Salida_UC <= "000010"; 
 		
-
-      --wait for <clock>_period*10;
-
-      -- insert stimulus here 
 
       wait;
    end process;

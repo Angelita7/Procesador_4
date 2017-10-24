@@ -1,5 +1,5 @@
-set -tmpdir "C:/Users/GEORGE/Desktop/Procesador_3/Procesador_3/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/GEORGE/Desktop/Procesador_3/Procesador_3/xst"
+set -tmpdir "G:/Arquitectura2017/Procesador_4/Procesador_4/xst/projnav.tmp"
+set -xsthdpdir "G:/Arquitectura2017/Procesador_4/Procesador_4/xst"
 elaborate
 -ifn ALU.prj
 -ifmt mixed
